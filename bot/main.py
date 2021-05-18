@@ -3,7 +3,7 @@ import os
 #import pynacl
 #import dnspython
 import server
-import jason
+import json
 import requests
 from discord.ext import commands
 
