@@ -3,3 +3,5 @@ flask
 python-dotenv
 PyNaCl
 dnspython
+json
+requests
