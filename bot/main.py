@@ -33,10 +33,9 @@ async def lol(ctx):
 
 @bot.event
 async def on_message(message):
-  await client.process_commands(message)
-  if message.author == client.user:
+  await bot.process_commands(message)
+  if message.author == bot.user:
     return
-  
   if message.content.startswith("$hello"):
     await message.channel.send("Hello!")
 
