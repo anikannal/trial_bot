@@ -5,10 +5,14 @@ import os
 import server
 import json
 import requests
+import psycopg2
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix="!")
 TOKEN = os.getenv("DISCORD_TOKEN")
+
+DATABASE_URL = os.environ['DATABASE_URL']
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 def getjoke():
   response = requests.get("https://icanhazdadjoke.com/",  headers={"Accept":"application/json"})
