@@ -28,7 +28,8 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send("pong")
+  print()
+  await ctx.send("pong")
 
 @bot.command()
 async def lol(ctx):
@@ -41,7 +42,7 @@ async def on_message(message):
   if message.author == bot.user:
     return
   if message.content.startswith("$hello"):
-    await message.channel.send("Hello!")
+    await message.channel.send("https://twitter.com/BonhamClive/status/1395807408635535364")
 
 
 server.server()
