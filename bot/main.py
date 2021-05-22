@@ -77,7 +77,7 @@ async def add(ctx, account_name):
   s += ") VALUES ("
   s += "%param"
   s += ")"
-  db_cursor.execute(s, account_name)
+  cursor.execute(s, account_name)
   send_str = "we are now following " + account_name
   await ctx.send(send_str)
 
