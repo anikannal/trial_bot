@@ -24,7 +24,7 @@ auth.set_access_token(ACCESS_KEY, ACCEES_SECRET)
 
 api = tweepy.API(auth)
 
-with open('follow_list.txt', 'r') as filehandle:
+with open('https://drive.google.com/file/d/1FsyxHAPrRhQj7v83a7zPcizRa7ZqSHY8/view?usp=sharing', 'r') as filehandle:
       follow_list = [acct.rstrip() for acct in filehandle.readlines()]
 
 #DATABASE_URL = os.environ['DATABASE_URL']
@@ -68,7 +68,7 @@ async def read(ctx):
 async def add(ctx, account_name):
   follow_list.append(account_name)
   ## add name to the follow list file
-  with open('follow_list.txt', 'w') as filehandle:
+  with open('https://drive.google.com/file/d/1FsyxHAPrRhQj7v83a7zPcizRa7ZqSHY8/view?usp=sharing', 'w') as filehandle:
     filehandle.writelines(account_name+"\n")
   send_str = "we are now following " + account_name
   await ctx.send(send_str)
