@@ -59,7 +59,7 @@ async def read(ctx):
   for acct in follow_list:
     public_tweets = api.user_timeline(acct)
     for tweet in public_tweets:
-      list_of_tweets.append("https://twitter.com/"+acct+"/status/"+tweet.id)
+      list_of_tweets.append("https://twitter.com/"+acct+"/status/"+str(tweet.id))
 
   await ctx.send(list_of_tweets)
 
@@ -67,7 +67,7 @@ async def read(ctx):
 async def add(ctx, account_name):
   follow_list.append(account_name)
   send_str = "we are now following " + account_name
-  await ctx.send("send_str")
+  await ctx.send(send_str)
 
 @bot.command()
 async def list(ctx):
@@ -80,7 +80,9 @@ async def on_message(message):
     return
   if message.content.startswith("$hello"):
     await message.channel.send("https://twitter.com/BonhamClive/status/1395807408635535364")
-  await message.channel.send("hi, I am the twitter bot. I can follow twitter handles for you./n 1. To read the latest tweets type - !read /n 2. To look at the list of handles I am following type - !list /n 3. To add a handle for me to follow type - !add <handle>")
+  
+  if message.content.contains("help"):
+    await message.channel.send("hi, I am the twitter bot. I can follow twitter handles for you.\n 1. To read the latest tweets type - !read \n 2. To look at the list of handles I am following type - !list \n 3. To add a handle for me to follow type - !add <handle>")
 
 
 server.server()
