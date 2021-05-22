@@ -74,10 +74,10 @@ async def add(ctx, account_name):
   s += "INSERT INTO follow_list"
   s += "("
   s += "t_name_user"
-  s += ") VALUES ("
-  s += "%param"
-  s += ")"
-  cursor.execute(s, account_name)
+  s += ") VALUES (\""
+  s += account_name
+  s += "\")"
+  cursor.execute(s)
   send_str = "we are now following " + account_name
   await ctx.send(send_str)
 
