@@ -61,7 +61,7 @@ async def read(ctx):
   for acct in follow_list:
     public_tweets = api.user_timeline(acct[0])
     for tweet in public_tweets:
-      list_of_tweets.append("https://twitter.com/"+acct+"/status/"+str(tweet.id))
+      list_of_tweets.append("https://twitter.com/"+acct[0]+"/status/"+str(tweet.id))
   ## show all the tweets
   for tweet in list_of_tweets:  
     await ctx.send(tweet)
@@ -77,7 +77,7 @@ async def add(ctx, account_name):
   s += ") VALUES ("
   s += "%param"
   s += ")"
-  db_cursor.execute(s, i)
+  db_cursor.execute(s, account_name)
   send_str = "we are now following " + account_name
   await ctx.send(send_str)
 
