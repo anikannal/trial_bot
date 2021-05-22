@@ -59,7 +59,7 @@ async def read(ctx):
   list_of_tweets = []
   ## gather all the tweets
   for acct in follow_list:
-    public_tweets = api.user_timeline(acct)
+    public_tweets = api.user_timeline(acct[0])
     for tweet in public_tweets:
       list_of_tweets.append("https://twitter.com/"+acct+"/status/"+str(tweet.id))
   ## show all the tweets
@@ -68,7 +68,7 @@ async def read(ctx):
 
 @bot.command()
 async def add(ctx, account_name):
-  follow_list.append(account_name)
+  follow_list.append((account_name,))
   ## add name to the follow list file
   s = ""
   s += "INSERT INTO follow_list"
@@ -85,7 +85,7 @@ async def add(ctx, account_name):
 @bot.command()
 async def list(ctx):
   for acct in follow_list:
-    await ctx.send("https://twitter.com/"+acct)
+    await ctx.send("https://twitter.com/"+acct[0])
 
 ## reply to a help message
 @bot.event
