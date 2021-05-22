@@ -30,6 +30,7 @@ cursor = conn.cursor()
 s = "SELECT twitter_account FROM follow_list"
 cursor.execute(s)
 follow_list = cursor.fetchall()
+print(follow_list)
 
 def getjoke():
   response = requests.get("https://icanhazdadjoke.com/",  headers={"Accept":"application/json"})
