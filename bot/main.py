@@ -73,7 +73,7 @@ async def add(ctx, account_name):
   s = ""
   s += "INSERT INTO follow_list"
   s += "("
-  s += "t_name_user"
+  s += "twitter_account"
   s += ") VALUES (\""
   s += account_name
   s += "\")"
