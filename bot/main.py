@@ -20,15 +20,16 @@ ACCESS_KEY = '1395235059087544323-Ofa3VCul9S2jdB5UTwfMKmFrKOsvPJ'
 ACCEES_SECRET = 'eBlz1J8pbpmrC4dd4xJVPxd2M5K8lV5b3qDtJxD7Mh8Hx'
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCEES_SECRET)
-
-
 api = tweepy.API(auth)
 
-with open('https://drive.google.com/file/d/1FsyxHAPrRhQj7v83a7zPcizRa7ZqSHY8/view?usp=sharing', 'r') as filehandle:
-      follow_list = [acct.rstrip() for acct in filehandle.readlines()]
+## create DB connection
+DATABASE_URL = os.environ['DATABASE_URL']
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+cursor = conn.cursor()
 
-#DATABASE_URL = os.environ['DATABASE_URL']
-#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+s = "SELECT twitter_account FROM follow_list"
+cursor.execute(s)
+follow_list = cursor.fetchall()
 
 def getjoke():
   response = requests.get("https://icanhazdadjoke.com/",  headers={"Accept":"application/json"})
@@ -68,8 +69,14 @@ async def read(ctx):
 async def add(ctx, account_name):
   follow_list.append(account_name)
   ## add name to the follow list file
-  with open('https://drive.google.com/file/d/1FsyxHAPrRhQj7v83a7zPcizRa7ZqSHY8/view?usp=sharing', 'w') as filehandle:
-    filehandle.writelines(account_name+"\n")
+  s = ""
+  s += "INSERT INTO follow_list"
+  s += "("
+  s += "t_name_user"
+  s += ") VALUES ("
+  s += "%param"
+  s += ")"
+  db_cursor.execute(s, i)
   send_str = "we are now following " + account_name
   await ctx.send(send_str)
 
