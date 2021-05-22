@@ -61,7 +61,8 @@ async def read(ctx):
     for tweet in public_tweets:
       list_of_tweets.append("https://twitter.com/"+acct+"/status/"+str(tweet.id))
 
-  await ctx.send(list_of_tweets)
+  for tweet in list_of_tweets:  
+    await ctx.send(tweet)
 
 @bot.command()
 async def add(ctx, account_name):
@@ -78,10 +79,7 @@ async def on_message(message):
   await bot.process_commands(message)
   if message.author == bot.user:
     return
-  if message.content.startswith("$hello"):
-    await message.channel.send("https://twitter.com/BonhamClive/status/1395807408635535364")
-  
-  if message.content.contains("help"):
+  if message.content.startswith("help"):
     await message.channel.send("hi, I am the twitter bot. I can follow twitter handles for you.\n 1. To read the latest tweets type - !read \n 2. To look at the list of handles I am following type - !list \n 3. To add a handle for me to follow type - !add <handle>")
 
 
