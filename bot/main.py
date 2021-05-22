@@ -63,7 +63,7 @@ async def read(ctx):
     for tweet in public_tweets:
       list_of_tweets.append("https://twitter.com/"+acct[0]+"/status/"+str(tweet.id))
   ## show all the tweets
-  for tweet in list_of_tweets:  
+  for tweet in list_of_tweets:
     await ctx.send(tweet)
 
 @bot.command()
@@ -76,7 +76,7 @@ async def add(ctx, account_name):
   s += "twitter_account"
   s += ") VALUES (\""
   s += account_name
-  s += "\")"
+  s += "\");"
   cursor.execute(s)
   send_str = "we are now following " + account_name
   await ctx.send(send_str)
@@ -84,6 +84,9 @@ async def add(ctx, account_name):
 ## list all the accounts being followed
 @bot.command()
 async def list(ctx):
+  guild = ctx.guild
+  channel = ctx.message.channel
+  print(str(guild)+" : "+str(channel))
   for acct in follow_list:
     await ctx.send("https://twitter.com/"+acct[0])
 
