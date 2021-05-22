@@ -81,7 +81,7 @@ async def list(ctx):
   
   if (follow_list == []):
     with open('follow_list.txt', 'r') as filehandle:
-    follow_list = [acct.rstrip() for acct in filehandle.readlines()]
+      follow_list = [acct.rstrip() for acct in filehandle.readlines()]
   
   for acct in follow_list:
     await ctx.send("https://twitter.com/"+acct)
