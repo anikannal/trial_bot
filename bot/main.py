@@ -24,7 +24,8 @@ auth.set_access_token(ACCESS_KEY, ACCEES_SECRET)
 
 api = tweepy.API(auth)
 
-follow_list = []
+with open('follow_list.txt', 'r') as filehandle:
+      follow_list = [acct.rstrip() for acct in filehandle.readlines()]
 
 #DATABASE_URL = os.environ['DATABASE_URL']
 #conn = psycopg2.connect(DATABASE_URL, sslmode='require')
@@ -53,15 +54,12 @@ async def lol(ctx):
 
 @bot.command()
 async def read(ctx):
-  
   list_of_tweets = []
-
   ## gather all the tweets
   for acct in follow_list:
     public_tweets = api.user_timeline(acct)
     for tweet in public_tweets:
       list_of_tweets.append("https://twitter.com/"+acct+"/status/"+str(tweet.id))
-
   ## show all the tweets
   for tweet in list_of_tweets:  
     await ctx.send(tweet)
@@ -78,11 +76,6 @@ async def add(ctx, account_name):
 ## list all the accounts being followed
 @bot.command()
 async def list(ctx):
-  
-  if (follow_list == []):
-    with open('follow_list.txt', 'r') as filehandle:
-      follow_list = [acct.rstrip() for acct in filehandle.readlines()]
-  
   for acct in follow_list:
     await ctx.send("https://twitter.com/"+acct)
 
