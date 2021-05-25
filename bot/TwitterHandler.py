@@ -22,8 +22,8 @@ class TwitterHandler:
         self.conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
         ## create the dataframes
-        self.df_accounts_list = postgresql_to_dataframe('select * from accounts_list', ['twitter_account','latest_tweet_id','tweet_ids'])
-        self.df_guild_channel = postgresql_to_dataframe('select * from guild_channel', ['guild','channel','twitter_accounts'])
+        self.df_accounts_list = self.postgresql_to_dataframe('select * from accounts_list', ['twitter_account','latest_tweet_id','tweet_ids'])
+        self.df_guild_channel = self.postgresql_to_dataframe('select * from guild_channel', ['guild','channel','twitter_accounts'])
 
     
 
