@@ -18,7 +18,7 @@ class TwitterHandler:
         self.api = tweepy.API(auth)
 
         ## get the database handle
-        os.environ['DATABASE_URL']
+        DATABASE_URL = os.environ['DATABASE_URL']
         self.conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
         ## create the dataframes
