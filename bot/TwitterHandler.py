@@ -9,10 +9,15 @@ class TwitterHandler:
     def __init__(self):
         
         ## get the twitter api handle
-        CONSUMER_KEY = 'tj2MHMY3MnHmyqiRPLOZIKZ3z'
-        CONSUMER_SECRET = 'k0qzJ3ZKyTAVna4TipLyCfwkaaluX40qTMDuxF7iZJzYLZ9dNh'
-        ACCESS_KEY = '1395235059087544323-Ofa3VCul9S2jdB5UTwfMKmFrKOsvPJ'
-        ACCEES_SECRET = 'eBlz1J8pbpmrC4dd4xJVPxd2M5K8lV5b3qDtJxD7Mh8Hx'
+
+        CONSUMER_KEY = os.environ['TWITTER_CONSUMER_KEY']
+        #CONSUMER_KEY = 'tj2MHMY3MnHmyqiRPLOZIKZ3z'
+        CONSUMER_SECRET = os.environ['TWITTER_CONSUMER_SECRET']
+        #'k0qzJ3ZKyTAVna4TipLyCfwkaaluX40qTMDuxF7iZJzYLZ9dNh'
+        ACCESS_KEY = os.environ['TWITTER_ACCESS_KEY']
+        #'1395235059087544323-Ofa3VCul9S2jdB5UTwfMKmFrKOsvPJ'
+        ACCEES_SECRET = os.environ['TWITTER_ACCESS_SECRET']
+        #'eBlz1J8pbpmrC4dd4xJVPxd2M5K8lV5b3qDtJxD7Mh8Hx'
         auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
         auth.set_access_token(ACCESS_KEY, ACCEES_SECRET)
         self.api = tweepy.API(auth)
