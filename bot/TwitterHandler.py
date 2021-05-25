@@ -27,7 +27,7 @@ class TwitterHandler:
 
     
 
-    def postgresql_to_dataframe(select_query, column_names):
+    def postgresql_to_dataframe(self,select_query, column_names):
         """
         Tranform a SELECT query into a pandas dataframe
         """
@@ -57,14 +57,14 @@ class TwitterHandler:
       
         return list(accounts_list)
 
-    def get_tweet_ids(list_of_accounts):
+    def get_tweet_ids(self,list_of_accounts):
         ## make a list of all the tweets to share
         tweet_ids = []
         for acct in list_of_accounts:
             tweet_ids.append(list(self.df_accounts_list['tweet_ids'][self.df_accounts_list['twitter_account']==acct]))
         return tweet_ids
 
-    def refresh_tweets(account_name=0):
+    def refresh_tweets(self,account_name=0):
         tweet_list=[]
         cursor = self.conn.cursor()
         if account_name == 0:
@@ -92,7 +92,7 @@ class TwitterHandler:
             cursor.commit()
 
 
-    def add_account(account_name,guild,channel=0):
+    def add_account(self,account_name,guild,channel=0):
         
         cursor = self.conn.cursor()
 
@@ -118,7 +118,7 @@ class TwitterHandler:
         
         return response
 
-        def get_tweets(guild, channel):
+        def get_tweets(self,guild, channel):
             list_of_tweets = []
             subset_accounts_list = self.get_follow_list(guild,channel)
             ## make a list of all the tweets to share
@@ -128,7 +128,7 @@ class TwitterHandler:
                 list_of_tweets.append("https://twitter.com/"+acct+"/status/"+str(tweet.id))
             return list_of_tweets
 
-        def get_following_list(guild, channel):
+        def get_following_list(self,guild, channel):
             links = []
             ## find all the accounts followed by this guild and channel
             accounts_list = list(self.df_guild_channel['twitter_accounts'][(self.df_guild_channel['guild'] == guild)&(self.df_guild_channel['channel'] == channel)])
