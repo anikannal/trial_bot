@@ -101,7 +101,7 @@ class TwitterHandler:
         
         cursor = self.conn.cursor()
 
-        if account_name not in get_follow_list():
+        if account_name not in self.get_follow_list():
             ## insert account into the dataframe
             self.df_accounts_list.loc[len(self.df_accounts_list.index)] = [account_name, '0', []]
             ## insert account into the db table
