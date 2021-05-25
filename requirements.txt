@@ -6,3 +6,4 @@ dnspython
 requests
 psycopg2-binary
 tweepy
+pandas
