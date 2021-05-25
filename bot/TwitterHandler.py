@@ -47,7 +47,7 @@ class TwitterHandler:
         df = pd.DataFrame(tupples, columns=column_names)
         return df
 
-    def get_following_list(guild = 0,channel=0):
+    def get_following_list(self,guild = 0,channel=0):
         ## send all accounts being followed if guild not shared
         if guild==0:
             accounts_list = self.df_accounts_list['twitter_account']
@@ -118,21 +118,21 @@ class TwitterHandler:
         
         return response
 
-        def get_tweets(self,guild, channel):
-            list_of_tweets = []
-            subset_accounts_list = self.get_follow_list(guild,channel)
-            ## make a list of all the tweets to share
-            tweet_ids = self.get_tweet_ids(subset_accounts_list)
-            ## convert from tweet_id to a link to the tweet
-            for tweet_id in tweet_ids:
-                list_of_tweets.append("https://twitter.com/"+acct+"/status/"+str(tweet.id))
-            return list_of_tweets
+    def get_tweets(self,guild, channel):
+        list_of_tweets = []
+        subset_accounts_list = self.get_follow_list(guild,channel)
+        ## make a list of all the tweets to share
+        tweet_ids = self.get_tweet_ids(subset_accounts_list)
+        ## convert from tweet_id to a link to the tweet
+        for tweet_id in tweet_ids:
+            list_of_tweets.append("https://twitter.com/"+acct+"/status/"+str(tweet.id))
+        return list_of_tweets
 
-        def get_following_list(self,guild, channel):
-            links = []
-            ## find all the accounts followed by this guild and channel
-            accounts_list = list(self.df_guild_channel['twitter_accounts'][(self.df_guild_channel['guild'] == guild)&(self.df_guild_channel['channel'] == channel)])
-            ## share the list of accounts being followed
-            for acct in accounts_list:
-                links.append("https://twitter.com/"+acct)
-            return links
+    def get_following_list(self,guild, channel):
+        links = []
+        ## find all the accounts followed by this guild and channel
+        accounts_list = list(self.df_guild_channel['twitter_accounts'][(self.df_guild_channel['guild'] == guild)&(self.df_guild_channel['channel'] == channel)])
+        ## share the list of accounts being followed
+        for acct in accounts_list:
+            links.append("https://twitter.com/"+acct)
+        return links
