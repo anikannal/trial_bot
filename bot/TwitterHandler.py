@@ -47,7 +47,7 @@ class TwitterHandler:
         df = pd.DataFrame(tupples, columns=column_names)
         return df
 
-    def get_following_list(self,guild = 0,channel=0):
+    def get_follow_list(self,guild = 0,channel=0):
         ## send all accounts being followed if guild not shared
         if guild==0:
             accounts_list = self.df_accounts_list['twitter_account']
@@ -128,7 +128,7 @@ class TwitterHandler:
             list_of_tweets.append("https://twitter.com/"+acct+"/status/"+str(tweet.id))
         return list_of_tweets
 
-    def get_following_list(self,guild, channel):
+    def get_follow_list(self,guild, channel):
         links = []
         ## find all the accounts followed by this guild and channel
         accounts_list = list(self.df_guild_channel['twitter_accounts'][(self.df_guild_channel['guild'] == guild)&(self.df_guild_channel['channel'] == channel)])

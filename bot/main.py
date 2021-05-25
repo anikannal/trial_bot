@@ -52,7 +52,7 @@ async def list(ctx):
   guild = ctx.guild
   channel = ctx.message.channel
   ## find all the accounts followed by this guild and channel
-  accounts_list = twitter_handler.get_following_list(guild,channel)
+  accounts_list = twitter_handler.get_follow_list(guild,channel)
   ## share the list of accounts being followed
   for acct in accounts_list:
     await ctx.send(acct)
