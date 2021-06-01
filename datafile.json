@@ -1,0 +1,216 @@
+[
+{
+    "id": "1",
+    "type": "multi",
+    "answer": "Field Marshall Sam Manekshaw",
+    "time": "10",
+    "clues": [
+        {"clue": "I was the first Indian Army officer to be promoted to the rank of field marshal.",
+         "illustration": ""
+        }
+        ,{"clue": "My active military career spanned four decades and five wars, beginning with service in World War II.",
+          "illustration": ""
+        }
+        ,{"clue": "Under my command, Indian forces conducted victorious campaigns against Pakistan in the Indo-Pakistani War of 1971, which led to the creation of Bangladesh in 1971.",
+         "illustration": ""
+        }
+        ,{"clue": "Though I was a Parsi, my regiment '8 Gorkha Rifles' gave me the nickname - 'Sam Bahadur'.",
+         "illustration": ""
+        }
+    ]
+}
+
+,{
+    "id": "2",
+    "type": "single",
+    "answer": "A Candle",
+    "time": "30",
+    "clues": [
+        {"clue": "You measure my life in hours and I serve you by expiring. \nI am quick when I am thin and slow when I am fat. \nThe wind is my enemy.\nWho am I?",
+         "illustration": ""
+        }
+        ]
+}
+
+,{
+    "id": "3",
+    "type": "single",
+    "answer": "A Fool",
+    "time": "30",
+    "clues": [
+        {"clue": "First of first is first in you.\nSecond of you is twice in you.\nFirst of last is last in you.\nWho are you?",
+         "illustration": ""
+        }
+        ]
+}
+
+,{
+    "id": "4",
+    "type": "single",
+    "answer": "A Map",
+    "time": "30",
+    "clues": [
+        {"clue": "I have cities, but no houses.\nI have mountains, but no trees.\nI have rivers, but no water.\nWhat am I?",
+         "illustration": ""
+        }
+        ]
+}
+
+,{
+    "id": "5",
+    "type": "multi",
+    "answer": "Mahatma Gandhi or Mohandas Karamchand Gandhi or Mohandas Gandhi",
+    "time": "10",
+    "clues": [
+        {"clue": "I am the one on the right.\nI was the youngest of my sibblings - \ntwo brothers, one sister, and two step sisters.",
+         "illustration": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Gandhi_and_Laxmidas_2.jpg/285px-Gandhi_and_Laxmidas_2.jpg"
+        }
+        ,{"clue": "I studied law in London and became a Barrister at the age of 22.",
+         "illustration": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Gandhi_student.jpg/285px-Gandhi_student.jpg"
+        }
+        ,{"clue": "I practiced law in South Africa before coming back to India.",
+         "illustration": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Gandhi_suit.jpg/255px-Gandhi_suit.jpg"
+        }
+        ,{"clue": "This is my wife and I.",
+         "illustration": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Gandhi_and_Kasturbhai_1902.jpg/330px-Gandhi_and_Kasturbhai_1902.jpg"
+        }
+        ,{"clue": "I started wearing dhoti and took up the cause of my fellow Indians after coming back to India.",
+         "illustration": "https://upload.wikimedia.org/wikipedia/commons/1/11/Gandhi_Kheda_1918.jpg"
+        }
+        
+    ]
+}
+
+,{
+    "id": "6",
+    "type": "single",
+    "answer": "The Letter R",
+    "time": "30",
+    "clues": [
+        {"clue": "What is seen in the middle of March and April that cannot be seen at the beginning or end of either month?",
+         "illustration": ""
+        }
+        ]
+}
+
+,{
+    "id": "7",
+    "type": "single",
+    "answer": "Heroine",
+    "time": "45",
+    "clues": [
+        {"clue": "What word in the English language does the following: \nthe first two letters signify a male, \nthe first three letters signify a female, \nthe first four letters signify a great, \nwhile the entire word signifies a great woman. \n\nWhat is the word? ",
+         "illustration": ""
+        }
+        ]
+}
+
+,{
+    "id": "8",
+    "type": "single",
+    "answer": "Keyboard or a Key board",
+    "time": "30",
+    "clues": [
+        {"clue": "I have keys, but no locks.\nSpace, and no rooms.\nYou can enter, but you cannot go outside.\nWhat am I?",
+         "illustration": ""
+        }
+        ]
+}
+
+,{
+    "id": "9",
+    "type": "single",
+    "answer": "Silence",
+    "time": "30",
+    "clues": [
+        {"clue": "What disappears as soon as you say its name?",
+         "illustration": ""
+        }
+        ]
+}
+
+,{
+    "id": "10",
+    "type": "single",
+    "answer": "Name",
+    "time": "30",
+    "clues": [
+        {"clue": "This belongs to you, but everyone else uses it.",
+         "illustration": ""
+        }
+        ]
+}
+
+,{
+    "id": "11",
+    "type": "single",
+    "answer": "The letter M",
+    "time": "30",
+    "clues": [
+        {"clue": "What comes once in a minute,\ntwice in a moment,\nbut never in a thousand years?",
+         "illustration": ""
+        }
+        ]
+}
+
+,{
+    "id": "12",
+    "type": "single",
+    "answer": "Qutub Minar",
+    "time": "30",
+    "clues": [
+        {"clue": "I am a victory tower. My construction was started by Qutbuddin Aibak and my last floor was added by Firuz Shah Tuglaq",
+         "illustration": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Qutb_Minar_2011.jpg/300px-Qutb_Minar_2011.jpg"
+        }
+        ]
+}
+
+,{
+    "id": "13",
+    "type": "single",
+    "answer": "Petra",
+    "time": "30",
+    "clues": [
+        {"clue": "I am a historic and archaeological city in southern Jordan.\nUNESCO has described me as 'one of the most precious cultural properties of our cultural heritage'.",
+         "illustration": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Treasury_petra_crop.jpeg/300px-Treasury_petra_crop.jpeg"
+        }
+        ]
+}
+
+,{
+    "id": "14",
+    "type": "single",
+    "answer": "Machu Pichu",
+    "time": "30",
+    "clues": [
+        {"clue": "I am 15th-century Inca citadel, located in southern Peru.\n I am referred to as the 'Lost City of the Incas'.",
+         "illustration": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/450px-Machu_Picchu%2C_Peru.jpg"
+        }
+        ]
+}
+
+,{
+    "id": "15",
+    "type": "single",
+    "answer": "The Golden Gate Bridge",
+    "time": "30",
+    "clues": [
+        {"clue": "I link the U.S. city of San Francisco, California to the northern tip of the San Francisco Peninsula.\nI have been declared one of the Wonders of the Modern World by the American Society of Civil Engineers.",
+         "illustration": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/405px-GoldenGateBridge-001.jpg"
+        }
+        ]
+}
+
+,{
+    "id": "16",
+    "type": "single",
+    "answer": "The Grand Canyon",
+    "time": "30",
+    "clues": [
+        {"clue": "I am carved by the Colorado River in Arizona, United States.\nI am 277 miles (446 km) long, up to 18 miles (29 km) wide and over a mile deep.",
+         "illustration": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Grand_Canyon_Panorama_2013.jpg/1200px-Grand_Canyon_Panorama_2013.jpg"
+        }
+        ]
+}
+
+]
